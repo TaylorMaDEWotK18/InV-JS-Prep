@@ -9,3 +9,10 @@ function sonLove() {
 	console.log(son);
 }
 sonLove();
+
+function innScp() {
+	let exNum = 18;
+	console.log(exNum);
+}
+innScp();
+console.log(exNum);
