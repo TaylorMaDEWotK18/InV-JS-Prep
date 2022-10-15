@@ -42,3 +42,11 @@ function makeMulti(x) {
 }
 const mul12 = makeMulti(12);
 console.log(mul12(6));
+
+function makeDivvy(i) {
+	return function(f) {
+		return i / f;
+	}
+}
+const div4 = makeDivvy(4);
+console.log(div4(1.6));
