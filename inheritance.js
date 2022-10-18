@@ -18,3 +18,6 @@ const knight = {
 		return 'KORT';
 	}
 }
+
+const hero = 'Thor';
+let newHero = +hero;
