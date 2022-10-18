@@ -1,11 +1,3 @@
-// class Knight {
-// 	name() {
-// 		return "Galahad";
-// 	}
-// }
-
-// const me = new Knight();
-// const you = new Knight();
 
 class Person {
 	talk() {
@@ -14,3 +6,15 @@ class Person {
 }
 
 const me = new Person();
+
+// class Knight {
+// 	name() {
+// 		return 'Knight of the Round Table';
+// 	}
+// }
+
+const knight = {
+	name() {
+		return 'KORT';
+	}
+}
