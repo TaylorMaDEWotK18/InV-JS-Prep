@@ -33,3 +33,19 @@ function addCon(name) {
 }
 
 conFun(consoles, addCon);
+
+//Lets do the exercise again, no looking
+
+const coolGames = ['Resident Evil 2','God of War','MegaMan','Zelda'];
+
+function games(arr, fn) {
+	for (let g = 0; g < arr.length; g++) {
+		fn(arr[g]);
+	}
+}
+
+function sayGames(name) {
+	console.log(name + ' is SO SICK!');
+}
+
+games(coolGames, sayGames);
