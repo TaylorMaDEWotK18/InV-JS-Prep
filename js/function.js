@@ -60,3 +60,11 @@ function isFieldEmpty() {
 		return false;
 	}
 }
+
+const emptyField = isFieldEmpty();
+
+if (emptyField === true) {
+	alert('HEY! Write something first fool!');
+} else {
+	alert('Please spell that correctly');
+}
