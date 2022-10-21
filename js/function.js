@@ -94,6 +94,7 @@ function haveFun(a) {
 console.log(haveFun(5));
 
 // Higher order function practice
+
 const apostles = ['James','Luke','John','Matt']
 
 function bosses(arr, fn) {
@@ -101,3 +102,9 @@ function bosses(arr, fn) {
 		fn(arr[x]);
 	}
 }
+
+function bossMes(name) {
+	console.log(`${name} was an amazing man!`);
+}
+
+bosses(apostles, bossMes);
