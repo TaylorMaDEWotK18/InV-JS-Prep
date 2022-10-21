@@ -68,3 +68,13 @@ if (emptyField === true) {
 } else {
 	alert('Please spell that correctly');
 }
+
+//Higher order function 
+
+const rePeople = ['Leon','Chris','Claire','Jill']
+
+function reFun(arr, fn) {
+	for (let r = 0; r < arr.length; r++) {
+		fn(arr[r]);
+	}
+}
