@@ -80,7 +80,7 @@ function reFun(arr, fn) {
 }
 
 function reMes(name) {
-	alert(`${name} has to be one of the dopest!`);
+	console.log(`${name} has to be one of the dopest!`);
 }
 reFun(rePeople, reMes);
 
@@ -89,4 +89,15 @@ let score = 120;
 
 function haveFun(a) {
 	return score + a;
+}
+
+console.log(haveFun(5));
+
+// Higher order function practice
+const apostles = ['James','Luke','John','Matt']
+
+function bosses(arr, fn) {
+	for(let x = 0; x < arr.length; x++) {
+		fn(arr[x]);
+	}
 }
