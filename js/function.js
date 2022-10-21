@@ -52,22 +52,22 @@ games(coolGames, sayGames);
 
 // Multiple returns in function
 
-function isFieldEmpty() {
-	const field = document.querySelector(`#info`);
-	if (field.value === '') {
-		return true
-	} else {
-		return false;
-	}
-}
+// function isFieldEmpty() {
+// 	const field = document.querySelector(`#info`);
+// 	if (field.value === '') {
+// 		return true
+// 	} else {
+// 		return false;
+// 	}
+// }
 
-const emptyField = isFieldEmpty();
+// const emptyField = isFieldEmpty();
 
-if (emptyField === true) {
-	alert('HEY! Write something first fool!');
-} else {
-	alert('Please spell that correctly');
-}
+// if (emptyField === true) {
+// 	alert('HEY! Write something first fool!');
+// } else {
+// 	alert('Please spell that correctly');
+// }
 
 //Higher order function 
 
@@ -78,3 +78,8 @@ function reFun(arr, fn) {
 		fn(arr[r]);
 	}
 }
+
+function reMes(name) {
+	alert(`${name} has to be one of the dopest!`);
+}
+reFun(rePeople, reMes);
