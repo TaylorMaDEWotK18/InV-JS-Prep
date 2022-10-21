@@ -83,3 +83,10 @@ function reMes(name) {
 	alert(`${name} has to be one of the dopest!`);
 }
 reFun(rePeople, reMes);
+
+// Closure function
+let score = 120;
+
+function haveFun(a) {
+	return score + a;
+}
