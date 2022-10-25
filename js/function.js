@@ -128,3 +128,13 @@ function temper(fahrenheit) {
 }
 
 temper(122);
+
+function max(oneNum, twoNum) {
+  if (oneNum > twoNum) {
+    return oneNum;
+  } else {
+    return twoNum;
+  }
+}
+
+console.log(max(2, 4));
