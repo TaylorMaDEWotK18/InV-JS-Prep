@@ -123,16 +123,3 @@ function getMyDrank(drink) {
 
 getMyDrank('Raspberry Tea');
 
-const color = ['blue','green','red','white']
-
-function colorCall(arr, fn) {
-	for(let x = 0; x < arr.length; x++) {
-		fn(arr[x]);
-	}
-}
-
-function sayColors(name) {
-	console.log(`${name} is my favorite!`);
-}
-
-colorCall(color, sayColors);
