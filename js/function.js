@@ -117,6 +117,10 @@ function bossMes(name) {
 
 bosses(apostles, bossMes);
 
+//--------------------------------------------------------------
+
+//Argument and Parameters Practice
+
 function getMyDrank(drink) {
 	console.log(`Hey! Your ${drink} is on the way!`);
 }
@@ -138,3 +142,21 @@ function max(oneNum, twoNum) {
 }
 
 console.log(max(2, 4));
+
+//----------------------------------------------------------------
+
+// Declarations vs Expressions
+
+//Declaration
+function tellTime(s) {
+	console.log(`Oh dang! It's ${s} o'clock already!`)
+}
+
+tellTime(12);
+
+//Expression
+const time = function(s) {
+	console.log(`Oh dang! It's ${s} o'clock already!`)
+};
+
+time(2);
