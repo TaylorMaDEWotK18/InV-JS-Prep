@@ -123,3 +123,8 @@ function getMyDrank(drink) {
 
 getMyDrank('Raspberry Tea');
 
+function temper(fahrenheit) {
+	return console.log((5/9) * (fahrenheit - 32));
+}
+
+temper(122);
