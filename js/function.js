@@ -93,6 +93,14 @@ function haveFun(a) {
 
 console.log(haveFun(5));
 
+const colorCode = 16;
+
+function addColors(a) {
+	return a * colorCode;
+}
+
+console.log(addColors(4));
+
 // Higher order function practice
 
 const apostles = ['James','Luke','John','Matt']
@@ -108,3 +116,23 @@ function bossMes(name) {
 }
 
 bosses(apostles, bossMes);
+
+function getMyDrank(drink) {
+	console.log(`Hey! Your ${drink} is on the way!`);
+}
+
+getMyDrank('Raspberry Tea');
+
+const color = ['blue','green','red','white']
+
+function colorCall(arr, fn) {
+	for(let x = 0; x < arr.length; x++) {
+		fn(arr[x]);
+	}
+}
+
+function sayColors(name) {
+	console.log(`${name} is my favorite!`);
+}
+
+colorCall(color, sayColors);
