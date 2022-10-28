@@ -10,13 +10,13 @@ function toCelsius(fahrenheit) {
 }
 let temp = `It's currently is ${toCelsius(86)} degrees outside!`;
 
-// if (toCelsius() <= 100) {
+// if (toCelsius < 100) {
 // 	alert('DAMN its cold outside!');
 // } else {
 // 	alert('Its feelin suuuper nice out!');
 // }
 
-toCelsius(200);
+toCelsius(9);
 
 //Exercising Higher Order Functions
 
@@ -34,7 +34,7 @@ function addCon(name) {
 
 conFun(consoles, addCon);
 
-//Lets do the exercise again, no looking
+//----------
 
 const coolGames = ['Resident Evil 2','God of War','MegaMan','Zelda'];
 
@@ -84,6 +84,22 @@ function reMes(name) {
 }
 reFun(rePeople, reMes);
 
+//-----------
+
+const apostles = ['James','Luke','John','Matt']
+
+function bosses(arr, fn) {
+	for(let x = 0; x < arr.length; x++) {
+		fn(arr[x]);
+	}
+}
+
+function bossMes(name) {
+	console.log(`${name} was an amazing man!`);
+}
+
+bosses(apostles, bossMes);
+
 // Closure function
 let score = 120;
 
@@ -100,22 +116,6 @@ function addColors(a) {
 }
 
 console.log(addColors(4));
-
-// Higher order function practice
-
-const apostles = ['James','Luke','John','Matt']
-
-function bosses(arr, fn) {
-	for(let x = 0; x < arr.length; x++) {
-		fn(arr[x]);
-	}
-}
-
-function bossMes(name) {
-	console.log(`${name} was an amazing man!`);
-}
-
-bosses(apostles, bossMes);
 
 //--------------------------------------------------------------
 
@@ -177,3 +177,11 @@ function sayIt(name) {
 }
 
 pumpUp(mes, sayIt);
+
+//------------------  Arrow Functions ------------------------------
+
+const pumpDown = (arr, fn) => {
+	for(let x = 0; x < arr.length; x++) {
+	fn(arr[x]);
+	}
+}
