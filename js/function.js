@@ -180,8 +180,15 @@ pumpUp(mes, sayIt);
 
 //------------------  Arrow Functions ------------------------------
 
+//Higher Order Arrow Function
 const pumpDown = (arr, fn) => {
 	for(let x = 0; x < arr.length; x++) {
 	fn(arr[x]);
 	}
 }
+
+const namoi = ['Jin','Katske','Masato','Shinji'];
+let namzee = namme => {
+	console.log(`Meet master ${namme}`);
+}
+pumpDown(namoi, namzee);
