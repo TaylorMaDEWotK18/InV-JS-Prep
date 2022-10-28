@@ -160,3 +160,20 @@ const time = function(s) {
 };
 
 time(2);
+
+const square = x => x * x;
+console.log(square(5));
+
+const mes = [`You are becoming the best coder ever!`, `Hayes' DONT QUIT!`];
+
+function pumpUp(arr, fn) {
+	for(let x = 0; x < arr.length; x++) {
+	fn(arr[x]);
+	}
+}
+
+function sayIt(name) {
+	console.log(`You have to know... ${name}`);
+}
+
+pumpUp(mes, sayIt);
