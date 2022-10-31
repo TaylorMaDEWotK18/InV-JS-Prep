@@ -197,11 +197,11 @@ pumpDown(namoi, namzee);
 
 //Dynamically Display on Page
 
-const main = document.querySelector('main');
-let count = ``;
+// const main = document.querySelector('main');
+// let count = ``;
 
-for ( let j = 5; j <= 1000; j+=5) {
-	count += `<div>${j}</div>`;
-}
+// for ( let j = 5; j <= 100; j+=5) {
+// 	count += `<div>${j}</div>`;
+// }
 
-main.innerHTML = count;
+// main.innerHTML = count;
