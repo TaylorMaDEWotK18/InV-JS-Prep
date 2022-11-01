@@ -1,6 +1,15 @@
 
+* {
+	box-sizing: border-box;
+}
 body {
 	background-color: rgb(79, 19, 135);
+}
+main {
+	margin: 5em 1em;
+	color: white;
+	font-size: 2em;
+	width: 50%;
 }
 
 div {
