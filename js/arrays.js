@@ -20,3 +20,15 @@ numbers.shift(18);
 
 const middle = ['lettuce','patty','cheese'];
 const burger = ['top bun', ...middle, 'bottom bun']
+
+//------- Lets iterate through some elements ---------
+
+const colors = ['blue', 'green', 'red', 'purple']
+
+function callColors() {
+for (let x = 0; x < colors.length; x++) {
+	console.log(colors[x]);	
+	}
+}
+
+callColors();
