@@ -31,4 +31,4 @@ for (let x = 0; x < colors.length; x++) {
 	}
 }
 
-callColors();
+callColors(colors.push('teal'), colors.unshift('black'));
