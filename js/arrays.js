@@ -18,7 +18,5 @@ numbers.shift(18);
 
 //------ Lets practice the spread operator ----
 
-const whoIsBatman = ['Batman is in the'];
-const wheresBat = ['the BatCave'];
-
-const batsLocation = [ `${whoIsBatman} ${wheresBat}`];
+const middle = ['lettuce','patty','cheese'];
+const burger = ['top bun', ...middle, 'bottom bun']
