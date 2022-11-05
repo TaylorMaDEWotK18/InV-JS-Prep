@@ -8,3 +8,6 @@ const numbers = [100, 200, 300, 400, 500];
 
 let firstOut = numbers.shift();
 let lastIn = numbers.pop();
+
+games.unshift('Ghost Song');
+let newGame = games.shift();
