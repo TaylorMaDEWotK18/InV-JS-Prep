@@ -2,11 +2,17 @@
 * {
 	box-sizing: border-box;
 }
+
 body {
 	background-color: rgb(79, 19, 135);
-}
+	color: #fff;
+	font-size: 1em;
+	font-family: "Gotham Rounded A", "Gotham Rounded B", "Gotham Rounded", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding-top: 1em;
+	}
+
 main {
-	margin: 5em 1em;
+	margin: 1em;
 	color: white;
 	font-size: 2em;
 	width: 50%;

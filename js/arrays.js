@@ -31,4 +31,21 @@ for (let x = 0; x < colors.length; x++) {
 	}
 }
 
-callColors(colors.push('teal'), colors.unshift('black'));
+// callColors(colors.push('teal'), colors.unshift('black'));
+// callColors();
+
+//--------- I want to build a loop to display in ordered list on the page -----
+
+const reCharacters = ['Leon','Chris','Wesker','Jill','Claire']
+
+function createReList(arr) {
+	let items = '';
+	for (let x = 0; x < arr.length; x++) {
+		items += `<li>${arr[x]}</li>`;
+	}
+	return items;
+}
+
+
+document.querySelector('main').innerHTML =
+`<ol>${createReList(reCharacters)}</ol>`;
