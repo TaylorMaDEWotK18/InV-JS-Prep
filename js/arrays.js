@@ -25,27 +25,28 @@ const burger = ['top bun', ...middle, 'bottom bun']
 
 const colors = ['blue', 'green', 'red', 'purple']
 
-function callColors() {
-for (let x = 0; x < colors.length; x++) {
-	console.log(colors[x]);	
+function callColors(arr) {
+	let items = '';
+	for (let x = 0; x < arr.length; x++) {
+		items += `<li>${arr[x]}</li>`;	
+		}
+		return items;
 	}
-}
 
-// callColors(colors.push('teal'), colors.unshift('black'));
-// callColors();
+document.querySelector('main').innerHTML =
+ `<ol>${callColors(colors)}</ol>`;
 
 //--------- I want to build a loop to display in ordered list on the page -----
 
-const reCharacters = ['Leon','Chris','Wesker','Jill','Claire']
+// const reCharacters = ['Leon','Chris','Wesker','Jill','Claire']
 
-function createReList(arr) {
-	let items = '';
-	for (let x = 0; x < arr.length; x++) {
-		items += `<li>${arr[x]}</li>`;
-	}
-	return items;
-}
+// function createReList(arr) {
+// 	let items = '';
+// 	for (let x = 0; x < arr.length; x++) {
+// 		items += `<li>${arr[x]}</li>`;
+// 	}
+// 	return items;
+// }
 
-
-document.querySelector('main').innerHTML =
-`<ol>${createReList(reCharacters)}</ol>`;
+// document.querySelector('main').innerHTML =
+// `<ol>${createReList(reCharacters)}</ol>`;
