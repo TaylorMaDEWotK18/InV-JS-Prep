@@ -54,10 +54,6 @@ const burger = ['top bun', ...middle, 'bottom bun']
 //===========================
 
 const systems = ['SNES','Sega','PS1','Dreamcast']
-let display = `
-<ol>${sickSystems(systems)}
-</ol>
-`;
 
 function sickSystems(arr) {
 	let items = '';
@@ -67,4 +63,21 @@ function sickSystems(arr) {
 	return items;
 }
 
-document.querySelector('main').innerHTML = display;
+document.querySelector('main').innerHTML = `
+	<ol>${sickSystems(systems)}
+	</ol>
+`
+
+//==========
+
+const vanias = ['Castlevania','Metroid','Hollow Knight','Ghost Song']
+
+function loopVanias(arr, fn) {
+	for (let x = o; x < arr.length; x++ ) {
+		fn(arr[x])
+	}
+}
+
+function sayVanias(name) {
+	console.log(name + ' is one of the best MetroidVanias!')
+}
