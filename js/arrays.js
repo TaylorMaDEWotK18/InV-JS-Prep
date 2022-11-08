@@ -23,18 +23,18 @@ const burger = ['top bun', ...middle, 'bottom bun']
 
 //------- Lets iterate through some elements ---------
 
-const colors = ['blue', 'green', 'red', 'purple']
+// const colors = ['blue', 'green', 'red', 'purple']
 
-function callColors(arr) {
-	let items = '';
-	for (let x = 0; x < arr.length; x++) {
-		items += `<li>${arr[x]}</li>`;	
-		}
-		return items;
-	}
+// function callColors(arr) {
+// 	let items = '';
+// 	for (let x = 0; x < arr.length; x++) {
+// 		items += `<li>${arr[x]}</li>`;	
+// 		}
+// 		return items;
+// 	}
 
-document.querySelector('main').innerHTML =
- `<ol>${callColors(colors)}</ol>`;
+// document.querySelector('main').innerHTML =
+//  `<ol>${callColors(colors)}</ol>`;
 
 //--------- I want to build a loop to display in ordered list on the page -----
 
@@ -50,3 +50,20 @@ document.querySelector('main').innerHTML =
 
 // document.querySelector('main').innerHTML =
 // `<ol>${createReList(reCharacters)}</ol>`;
+
+//===========================
+
+const systems = ['SNES','Sega','PS1','Dreamcast']
+const math = ['add','sub','div','mult']
+
+function sickSystems(blk, fn) {
+	for(let d = 0; d < blk.length; d++) {
+		fn(blk[d]);
+	}
+}
+
+function saySystems(fav) {
+	console.log(fav + ' is one of the best consoles EVER!');
+}
+
+sickSystems(math, saySystems);
