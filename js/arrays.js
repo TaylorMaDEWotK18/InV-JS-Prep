@@ -54,6 +54,10 @@ const burger = ['top bun', ...middle, 'bottom bun']
 //===========================
 
 const systems = ['SNES','Sega','PS1','Dreamcast']
+let display = `
+<ol>${sickSystems(systems)}
+</ol>
+`;
 
 function sickSystems(arr) {
 	let items = '';
@@ -63,7 +67,4 @@ function sickSystems(arr) {
 	return items;
 }
 
-document.querySelector('main').innerHTML = `
-	<ol>${sickSystems(systems)}
-	</ol>
-`
+document.querySelector('main').innerHTML = display;
