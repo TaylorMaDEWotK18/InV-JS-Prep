@@ -69,11 +69,11 @@ document.querySelector('main').innerHTML = `
 `
 
 //==========
-
-const vanias = ['Castlevania','Metroid','Hollow Knight','Ghost Song']
+const moreVanias = ['Sundered','BloodStained']
+const vanias = ['Castlevania','Metroid', ...moreVanias, 'Hollow Knight','Ghost Song']
 
 function loopVanias(arr, fn) {
-	for (let x = o; x < arr.length; x++ ) {
+	for (let x = 0; x < arr.length; x++ ) {
 		fn(arr[x])
 	}
 }
@@ -81,3 +81,5 @@ function loopVanias(arr, fn) {
 function sayVanias(name) {
 	console.log(name + ' is one of the best MetroidVanias!')
 }
+
+loopVanias(vanias, sayVanias)
