@@ -54,16 +54,16 @@ const burger = ['top bun', ...middle, 'bottom bun']
 //===========================
 
 const systems = ['SNES','Sega','PS1','Dreamcast']
-const math = ['add','sub','div','mult']
 
-function sickSystems(blk, fn) {
-	for(let d = 0; d < blk.length; d++) {
-		fn(blk[d]);
+function sickSystems(arr) {
+	let items = '';
+	for(let x = 0; x < arr.length; x++) {
+		items += `<li>${arr[x]} is one of the sickest systems EVER!</li>`;
 	}
+	return items;
 }
 
-function saySystems(fav) {
-	console.log(fav + ' is one of the best consoles EVER!');
-}
-
-sickSystems(math, saySystems);
+document.querySelector('main').innerHTML = `
+	<ol>${sickSystems(systems)}
+	</ol>
+`

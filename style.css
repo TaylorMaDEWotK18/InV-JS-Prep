@@ -5,6 +5,9 @@
 h1 {
 	margin-left: 40px;;
 }
+ol {
+	width: 100vw;
+}
 body {
 	background-color: rgb(79, 19, 135);
 	color: #fff;
