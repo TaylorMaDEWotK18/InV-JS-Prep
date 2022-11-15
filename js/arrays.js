@@ -8,13 +8,14 @@ games.unshift('Donkey Kong');
 
 const numbers = [100, 200, 300, 400, 500];
 
-let firstOut = numbers.shift();
+let firstOut = numbers.unshift();
 let lastIn = numbers.pop();
 
 games.unshift('Ghost Song');
 let newGame = games.shift();
 
-numbers.shift(18);
+console.log(numbers.unshift(8));
+// console.log(firstOut);
 
 //------ Lets practice the spread operator ----
 
@@ -55,31 +56,46 @@ const burger = ['top bun', ...middle, 'bottom bun']
 
 const systems = ['SNES','Sega','PS1','Dreamcast']
 
-function sickSystems(arr) {
+// function sickSystems(arr) {
+// 	let items = '';
+// 	for(let x = 0; x < arr.length; x++) {
+// 		items += `<li>${arr[x]} is one of the sickest systems EVER!</li>`;
+// 	}
+// 	return items;
+// }
+
+// document.querySelector('main').innerHTML = `
+// 	<ol>${sickSystems(systems)}
+// 	</ol>
+// `
+
+//==========
+// const moreVanias = ['Sundered','BloodStained']
+// const vanias = ['Castlevania','Metroid', ...moreVanias, 'Hollow Knight','Ghost Song']
+
+// function loopVanias(arr) {
+// 	let arrObjects = '';
+// 	for (let x = 0; x < arr.length; x++ ) {
+// 		arrObjects += `<li>${arr[x]} is one of the best!</li>`
+// 	}
+// 	return arrObjects;
+// }
+
+// vanias.unshift('BroForce')
+// document.querySelector('main').innerHTML = `
+// <ol>${loopVanias(vanias)}</ol>`
+
+//----------------------------------------------
+
+const turtles = ['Mikey','Raph','Leo','Donni']
+
+function shellShock(arr) {
 	let items = '';
-	for(let x = 0; x < arr.length; x++) {
-		items += `<li>${arr[x]} is one of the sickest systems EVER!</li>`;
+	for (let x = 0; x < arr.length; x++) {
+		items += `<li> ${turtles[x]} is the most radical!`
 	}
 	return items;
 }
 
 document.querySelector('main').innerHTML = `
-	<ol>${sickSystems(systems)}
-	</ol>
-`
-
-//==========
-const moreVanias = ['Sundered','BloodStained']
-const vanias = ['Castlevania','Metroid', ...moreVanias, 'Hollow Knight','Ghost Song']
-
-function loopVanias(arr, fn) {
-	for (let x = 0; x < arr.length; x++ ) {
-		fn(arr[x])
-	}
-}
-
-function sayVanias(name) {
-	console.log(name + ' is one of the best MetroidVanias!')
-}
-
-loopVanias(vanias, sayVanias)
+<ol>${shellShock(turtles)}</ol>`;
