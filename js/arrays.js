@@ -89,13 +89,22 @@ const systems = ['SNES','Sega','PS1','Dreamcast']
 
 const turtles = ['Mikey','Raph','Leo','Donni']
 
-function shellShock(arr) {
-	let items = '';
-	for (let x = 0; x < arr.length; x++) {
-		items += `<li> ${turtles[x]} is the most radical!`
+// function shellShock(arr) {
+// 	let items = '';
+// 	for (let x = 0; x < arr.length; x++) {
+// 		items += `<li> ${turtles[x]} is the most radical!`
+// 	}
+// 	return items;
+// }
+
+const shellShock = arr => {
+	let items = ``;
+	for ( let x = 0; x < arr.length; x++) {
+		items += `<li>${turtles[x]} is the sickest turtle!</li>`
 	}
 	return items;
 }
 
 document.querySelector('main').innerHTML = `
 <ol>${shellShock(turtles)}</ol>`;
+
