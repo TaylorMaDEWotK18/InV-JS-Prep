@@ -14,9 +14,6 @@ let lastIn = numbers.pop();
 games.unshift('Ghost Song');
 let newGame = games.shift();
 
-console.log(numbers.unshift(8));
-// console.log(firstOut);
-
 //------ Lets practice the spread operator ----
 
 const middle = ['lettuce','patty','cheese'];
@@ -89,6 +86,8 @@ const systems = ['SNES','Sega','PS1','Dreamcast']
 
 const turtles = ['Mikey','Raph','Leo','Donni']
 
+//===== FUNCTION DECLARATION VERSION ====
+
 // function shellShock(arr) {
 // 	let items = '';
 // 	for (let x = 0; x < arr.length; x++) {
@@ -97,14 +96,50 @@ const turtles = ['Mikey','Raph','Leo','Donni']
 // 	return items;
 // }
 
-const shellShock = arr => {
-	let items = ``;
-	for ( let x = 0; x < arr.length; x++) {
-		items += `<li>${turtles[x]} is the sickest turtle!</li>`
+//====== ARROW VERSION ==========
+
+// const shellShock = arr => {
+// 	let items = ``;
+// 	for ( let x = 0; x < arr.length; x++) {
+// 		items += `<li>${turtles[x]} is the sickest turtle!</li>`
+// 	}
+// 	return items;
+// }
+
+// document.querySelector('main').innerHTML = `
+// <ol>${shellShock(turtles)}</ol>`;
+
+function shellShock(arr) {
+	items = '';
+	for (let x = 0; x < arr.length; x++) {
+		items += `<li>${arr[x]} is the greatest turtle!</li>`
 	}
 	return items;
 }
 
+// function turtlePower(name) {
+// 	items += ` ${name} is the greatest turtle!`
+// }
+
 document.querySelector('main').innerHTML = `
 <ol>${shellShock(turtles)}</ol>`;
 
+const planets = ['Earth','Mars','Saturn','Mercury','Jupiter','Venus','Uranus','Neptune'];
+
+planets.join(', ');
+
+// console.log(planets);
+
+// ======= Search list challenge ==========
+
+const inStock = ['grapes','peaches','strawberries','kiwi','mango','blackberries']
+
+const ask = prompt('Which fruit would you like?');
+
+let message;
+
+if ( inStock.includes(ask)) {
+	return message = `YES! That's in stock!`
+} else {
+	return message = `No sorry, we're fresh out of that!`
+}
