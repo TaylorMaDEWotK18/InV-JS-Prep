@@ -139,7 +139,9 @@ const ask = prompt('Which fruit would you like?');
 let message;
 
 if ( inStock.includes(ask)) {
-	return message = `YES! That's in stock!`
+  message = `YES! ${ask}'s in stock! It's on aisle ${inStock.indexOf(ask)}`
 } else {
-	return message = `No sorry, we're fresh out of that!`
+	message = `No sorry, we're fresh out of ${ask}!`
 }
+
+document.querySelector('main').innerHTML = message;
