@@ -138,10 +138,12 @@ const ask = prompt('Which fruit would you like?');
 
 let message;
 
-if ( inStock.includes(ask)) {
-  message = `YES! ${ask}'s in stock! It's on aisle ${inStock.indexOf(ask)}`
+if (!ask) {
+	message = `<strong>In Stock:</strong> ${inStock.join(', ')}`
+} else if ( inStock.includes(ask.toLowerCase())) {
+  message = `YES! <strong>${ask}'s</strong> in stock! It's on aisle ${inStock.indexOf(ask.toLowerCase()) + 1}`
 } else {
-	message = `No sorry, we're fresh out of ${ask}!`
-}
+	message = `No sorry, we're fresh out of <strong>${ask.toLowerCase()}</strong>!`
+} 
 
-document.querySelector('main').innerHTML = message;
+document.querySelector('main').innerHTML = `<p>${message}</p>`;
