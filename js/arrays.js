@@ -147,3 +147,11 @@ if (!ask) {
 } 
 
 document.querySelector('main').innerHTML = `<p>${message}</p>`;
+
+// --------- Multidimensional Arrays ---------------------------------------
+
+const multiArray = [
+	['Cloud','Sephiroth','Tifa','Berrett'],
+	['Zidan','Vivi','Garnet','Steiner'],
+	['Vaan','Ashe','Balthier','Basch']
+]
