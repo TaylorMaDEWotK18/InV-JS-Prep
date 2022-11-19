@@ -148,7 +148,7 @@ const inStock = ['grapes','peaches','strawberries','kiwi','mango','blackberries'
 
 // document.querySelector('main').innerHTML = `<p>${message}</p>`;
 
-// --------- Multidimensional Arrays ---------------------------------------
+// ============ Multidimensional Arrays =========================================
 
 const multiArray = [
 	['Cloud','Sephiroth','Tifa','Berrett'],
@@ -156,4 +156,23 @@ const multiArray = [
 	['Vaan','Ashe','Balthier','Basch']
 ]
 
-alert(multiArray[2][2])
+console.log(multiArray[2][2])
+
+//------------- Playlist Artist/ Song / Playtime Challenge -----------------
+
+const playlist = [
+	['Griz','Mad Liberation - 3:06'],
+	['Elton','Tiny Dancer - 4:16'],
+	['Whitney Housten','I Wanna Dance with Somebody - 4:32']
+]
+
+function showList(arr) {
+	let items;
+	for (let x = 0; x < arr.length; x++) {
+		items += `<li>${arr[x].join(', ')}</li>`
+	}
+	return items;
+}
+
+document.querySelector('main').innerHTML = `
+<ol>${showList(playlist)}</ol>`
