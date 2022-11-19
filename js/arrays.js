@@ -161,18 +161,18 @@ console.log(multiArray[2][2])
 //------------- Playlist Artist/ Song / Playtime Challenge -----------------
 
 const playlist = [
-	['Griz','Mad Liberation - 3:06'],
-	['Elton','Tiny Dancer - 4:16'],
-	['Whitney Housten','I Wanna Dance with Somebody - 4:32']
+	['Griz','Mad Liberation', '3:06'],
+	['Elton Johnz','Tiny Dancer', '4:16'],
+	['Whitney Housten','I Wanna Dance with Somebody', '4:32']
 ]
 
 function showList(arr) {
 	let items;
 	for (let x = 0; x < arr.length; x++) {
-		items += `<li>${arr[x].join(', ')}</li>`
+		items += `<li>${arr[x][0]}:  ${arr[x][1]} -  ${arr[x][2]}</li>`
 	}
 	return items;
 }
 
 document.querySelector('main').innerHTML = `
-<ol>${showList(playlist)}</ol>`
+<ol>${showList(playlist)}</ol>`;

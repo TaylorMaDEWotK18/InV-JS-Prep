@@ -24,10 +24,10 @@ main {
 }
 li {
 	max-width: 90%;
-	padding-left: 1em;
+	padding:.5em 1em;
 	margin: 10px 0;
 	border-radius: 5px;
-	background-color: rgb(208, 223, 236);
+	background-color: white;
 	color:  rgb(79, 19, 135);
 }
 div {
