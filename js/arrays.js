@@ -191,12 +191,23 @@ const quiz = [
 ]
 
 let correctAnswers = '';
+let rightOnes = [];
+let wrongOnes = [];
 
 for ( let x = 0; x < quiz.length; x++) {
-	const ask = prompt(`${quiz[x][0]}`);
+	let ask = prompt(quiz[x][0]);
 	if ( ask === quiz[x][1].toLowerCase()) {
-		correctAnswers++
+		correctAnswers++;
+		`<li>${rightOnes.push(quiz[x][0])}</li>`;
+	} else {
+		`<li>${wrongOnes.push(quiz[x][0])}`;
 	}
 }
 
-document.querySelector('main').innerHTML = `Congrats! You got <strong>${correctAnswers}</strong> of the answers correct!`;
+document.querySelector('main').innerHTML = `Congrats! You got <strong>${correctAnswers}</strong> of the answers correct!
+<h3>You got these ones right</h3>
+	<ol>${rightOnes}</ol>
+	
+	<h3>You got these ones wrong</h3>
+	<ol>${wrongOnes}</ol>`;
+
