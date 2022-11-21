@@ -160,25 +160,25 @@ console.log(multiArray[2][2])
 
 //------------- Playlist Artist/ Song / Playtime Challenge -----------------
 
-const playlist = [
-	['Griz','Mad Liberation', '3:06'],
-	['Elton Johnz','Tiny Dancer', '4:16'],
-	['Whitney Housten','I Wanna Dance with Somebody', '4:32']
-];
+// const playlist = [
+// 	['Griz','Mad Liberation', '3:06'],
+// 	['Elton Johnz','Tiny Dancer', '4:16'],
+// 	['Whitney Housten','I Wanna Dance with Somebody', '4:32']
+// ];
 
-function showList(arr) {
-	let items = '';
-	for (let x = 0; x < arr.length; x++) {
-		items += `<li>${arr[x][0]}:  ${arr[x][1]} -  ${arr[x][2]}</li>`;
-	}
-	return items;
-}
+// function showList(arr) {
+// 	let items = '';
+// 	for (let x = 0; x < arr.length; x++) {
+// 		items += `<li>${arr[x][0]}:  ${arr[x][1]} -  ${arr[x][2]}</li>`;
+// 	}
+// 	return items;
+// }
 
-document.querySelector('main').innerHTML = `
-	<ol>
-		${showList(playlist)}
-	</ol>
-`;
+// document.querySelector('main').innerHTML = `
+// 	<ol>
+// 		${showList(playlist)}
+// 	</ol>
+// `;
 
 
 // ==================== Build a Quiz ====================
@@ -192,9 +192,11 @@ const quiz = [
 
 let correctAnswers = '';
 
-for ( let x = 0; x < arr[x].length; x++) {
-	const ask = prompt(`${arr[x]}`);
+for ( let x = 0; x < quiz.length; x++) {
+	const ask = prompt(`${quiz[x][0]}`);
 	if ( ask === quiz[x][1]) {
 		correctAnswers++
 	}
 }
+
+document.querySelector('main').innerHTML = `Congrats! You got <strong>${correctAnswers}</strong> of the answers correct!`;
