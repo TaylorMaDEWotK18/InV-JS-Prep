@@ -194,7 +194,7 @@ let correctAnswers = '';
 
 for ( let x = 0; x < quiz.length; x++) {
 	const ask = prompt(`${quiz[x][0]}`);
-	if ( ask === quiz[x][1]) {
+	if ( ask === quiz[x][1].toLowerCase()) {
 		correctAnswers++
 	}
 }
