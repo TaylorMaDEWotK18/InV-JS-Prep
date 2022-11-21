@@ -121,12 +121,12 @@ function shellShock(arr) {
 // 	items += ` ${name} is the greatest turtle!`
 // }
 
-document.querySelector('main').innerHTML = `
-<ol>${shellShock(turtles)}</ol>`;
+// document.querySelector('main').innerHTML = `
+// <ol>${shellShock(turtles)}</ol>`;
 
 const planets = ['Earth','Mars','Saturn','Mercury','Jupiter','Venus','Uranus','Neptune'];
 
-planets.join(', ');
+// planets.join(', ');
 
 // console.log(planets);
 
@@ -164,15 +164,29 @@ const playlist = [
 	['Griz','Mad Liberation', '3:06'],
 	['Elton Johnz','Tiny Dancer', '4:16'],
 	['Whitney Housten','I Wanna Dance with Somebody', '4:32']
-]
+];
 
-function showList(arr) {
-	let items;
-	for (let x = 0; x < arr.length; x++) {
-		items += `<li>${arr[x][0]}:  ${arr[x][1]} -  ${arr[x][2]}</li>`
+// function showList(arr) {
+// 	let items = '';
+// 	for (let x = 0; x < arr.length; x++) {
+// 		items += `<li>${arr[x][0]}:  ${arr[x][1]} -  ${arr[x][2]}</li>`;
+// 	}
+// 	return items;
+// }
+
+// document.querySelector('main').innerHTML = `
+// 	<ol>
+// 		${showList(playlist)}
+// 	</ol>
+// `;
+
+function sayPlanets(arr) {
+	let items = '';
+	for ( let x = 0; x < arr.length; x++) {
+		items += `<li>${arr[x]} is an amazing planet!</li>`;
 	}
 	return items;
 }
 
 document.querySelector('main').innerHTML = `
-<ol>${showList(playlist)}</ol>`;
+<ol>${sayPlanets(planets)}</ol>`
