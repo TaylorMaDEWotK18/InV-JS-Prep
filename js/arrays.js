@@ -189,3 +189,12 @@ const quiz = [
 	['What is Kratos Axe called?','Leviathan Axe'],
 	['What is Sindri and Broks last name?','Huldra']
 ]
+
+let correctAnswers = '';
+
+for ( let x = 0; x < arr[x].length; x++) {
+	const ask = prompt(`${arr[x]}`);
+	if ( ask === quiz[x][1]) {
+		correctAnswers++
+	}
+}
