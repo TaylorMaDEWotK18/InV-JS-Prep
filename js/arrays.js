@@ -166,27 +166,26 @@ const playlist = [
 	['Whitney Housten','I Wanna Dance with Somebody', '4:32']
 ];
 
-// function showList(arr) {
-// 	let items = '';
-// 	for (let x = 0; x < arr.length; x++) {
-// 		items += `<li>${arr[x][0]}:  ${arr[x][1]} -  ${arr[x][2]}</li>`;
-// 	}
-// 	return items;
-// }
-
-// document.querySelector('main').innerHTML = `
-// 	<ol>
-// 		${showList(playlist)}
-// 	</ol>
-// `;
-
-function sayPlanets(arr) {
+function showList(arr) {
 	let items = '';
-	for ( let x = 0; x < arr.length; x++) {
-		items += `<li>${arr[x]} is an amazing planet!</li>`;
+	for (let x = 0; x < arr.length; x++) {
+		items += `<li>${arr[x][0]}:  ${arr[x][1]} -  ${arr[x][2]}</li>`;
 	}
 	return items;
 }
 
 document.querySelector('main').innerHTML = `
-<ol>${sayPlanets(planets)}</ol>`
+	<ol>
+		${showList(playlist)}
+	</ol>
+`;
+
+
+// ==================== Build a Quiz ====================
+
+const quiz = [
+	['What is Clouds favorite sword?','Buster'],
+	['What are Kratos Blades called?','Blades of Chaos'],
+	['What is Kratos Axe called?','Leviathan Axe'],
+	['What is Sindri and Broks last name?','Huldra']
+]
