@@ -86,6 +86,22 @@ const systems = ['SNES','Sega','PS1','Dreamcast']
 
 const turtles = ['Mikey','Raph','Leo','Donni']
 
+//--------- Play with the map() method ----------
+
+// const newTurtles = turtles.map(turtle => turtle + ` has gotta be the best turtle around!`)
+
+// function favTurtles(arr, fn) {
+// 	for (let x = 0; x < arr.length; x++) {
+// 		fn(arr[x]);
+// 		}
+// 	}
+
+// function turtleTalk(name) {
+// 	console.log(`${name} Just can't beat um!`);
+// }
+
+// favTurtles(newTurtles, turtleTalk);
+
 //===== FUNCTION DECLARATION VERSION ====
 
 // function shellShock(arr) {
@@ -257,16 +273,8 @@ let wrongAnswers = [];
 // <ol>${myFreshFunc(wrongAnswers)}</ol>
 // `
 
-const newTurtles = turtles.map(turtle => turtle + ` has gotta be the best turtle around!`)
+const weapons = ['blades','axe','spear']
 
-function favTurtles(arr, fn) {
-	for (let x = 0; x < arr.length; x++) {
-		fn(arr[x]);
-		}
-	}
+const bigWeapons = weapons.map(x => x.toUpperCase())
 
-function turtleTalk(name) {
-	console.log(`${name} Just can't beat um!`);
-}
-
-favTurtles(newTurtles, turtleTalk);
+console.log(bigWeapons)
