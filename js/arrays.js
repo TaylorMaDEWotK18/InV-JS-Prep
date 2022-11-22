@@ -278,3 +278,8 @@ const weapons = ['blades','axe','spear']
 const bigWeapons = weapons.map(x => x.toUpperCase())
 
 console.log(bigWeapons)
+
+const finalFantasy = ['Cloud', 'Zidane', 'Cecil']
+
+const smallFF = finalFantasy.map(x => x.toLowerCase())
+console.log(smallFF)
