@@ -257,14 +257,16 @@ let wrongAnswers = [];
 // <ol>${myFreshFunc(wrongAnswers)}</ol>
 // `
 
+const newTurtles = turtles.map(turtle => turtle + ` has gotta be the best turtle around!`)
+
 function favTurtles(arr, fn) {
 	for (let x = 0; x < arr.length; x++) {
 		fn(arr[x]);
+		}
 	}
-}
 
 function turtleTalk(name) {
-	console.log(`${name} has gotta be the best turtle around!`)
+	console.log(`${name} Just can't beat um!`);
 }
 
-favTurtles(turtles, turtleTalk);
+favTurtles(newTurtles, turtleTalk);
