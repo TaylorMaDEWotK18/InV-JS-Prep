@@ -231,40 +231,40 @@ let correctAnswers = 0;
 let rightAnswers = [];
 let wrongAnswers = [];
 
-for ( let x = 0; x < quiz.length; x++) {
-	let ask = prompt(quiz[x][0]);
-	if ( ask === quiz[x][1]) {
-		correctAnswers++;
-		rightAnswers.push(quiz[x][0])
-	} else {
-		wrongAnswers.push(quiz[x][0])
-	}
-} 
+// for ( let x = 0; x < quiz.length; x++) {
+// 	let ask = prompt(quiz[x][0]);
+// 	if ( ask === quiz[x][1]) {
+// 		correctAnswers++;
+// 		rightAnswers.push(quiz[x][0])
+// 	} else {
+// 		wrongAnswers.push(quiz[x][0])
+// 	}
+// } 
 
-function myFreshFunc(arr) {
-	let items = '';
+// function myFreshFunc(arr) {
+// 	let items = '';
+// 	for (let x = 0; x < arr.length; x++) {
+// 		items += `<li>${arr[x]}</li>`;
+// 	}
+// 	return items;
+// }
+
+// document.querySelector('main').innerHTML = `
+// <h2>Congrats! You got ${correctAnswers} answer(s) correct!</h2>
+// <h3> These were the questions you got right!</h3>
+// <ol>${myFreshFunc(rightAnswers)}</ol>
+// <h3> These were the questions you got <strong>wrong</strong></h3>
+// <ol>${myFreshFunc(wrongAnswers)}</ol>
+// `
+
+function favTurtles(arr, fn) {
 	for (let x = 0; x < arr.length; x++) {
-		items += `<li>${arr[x]}</li>`;
-	}
-	return items;
-}
-
-document.querySelector('main').innerHTML = `
-<h2>Congrats! You got ${correctAnswers} answer(s) correct!</h2>
-<h3> These were the questions you got right!</h3>
-<ol>${myFreshFunc(rightAnswers)}</ol>
-<h3> These were the questions you got <strong>wrong</strong></h3>
-<ol>${myFreshFunc(wrongAnswers)}</ol>
-`
-
-function startFun(arr, fn) {
-	for ( let x = 0; x < arr.length; x++){
 		fn(arr[x]);
 	}
 }
 
-function endFunc(name) {
-	console.log(`${name} is one of the best colors`);
+function turtleTalk(name) {
+	console.log(`${name} has gotta be the best turtle around!`)
 }
 
-startFun(colors, endFunc);
+favTurtles(turtles, turtleTalk);
