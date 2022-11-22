@@ -21,7 +21,7 @@ const burger = ['top bun', ...middle, 'bottom bun']
 
 //------- Lets iterate through some elements ---------
 
-// const colors = ['blue', 'green', 'red', 'purple']
+const colors = ['blue', 'green', 'red', 'purple']
 
 // function callColors(arr) {
 // 	let items = '';
@@ -183,31 +183,88 @@ console.log(multiArray[2][2])
 
 // ==================== Build a Quiz ====================
 
+// const quiz = [
+// 	['What is Clouds favorite sword?','Buster'],
+// 	['What are Kratos Blades called?','Blades of Chaos'],
+// 	['What is Kratos Axe called?','Leviathan Axe'],
+// 	['What is Sindri and Broks last name?','Huldra']
+// ]
+
+// let correctAnswers = '';
+// let rightOnes = [];
+// let wrongOnes = [];
+
+// for ( let x = 0; x < quiz.length; x++) {
+// 	let ask = prompt(quiz[x][0]);
+// 	if ( ask === quiz[x][1].toLowerCase()) {
+// 		correctAnswers++;
+// 		rightOnes.push(quiz[x][0]);
+// 	} else {
+// 		wrongOnes.push(quiz[x][0]);
+// 	}
+// }
+
+// function results(arr) {
+// 	let items = ``;
+// 	for (let x = 0; x < arr.length; x++) {
+// 		items += `<li>${arr[x]}</li>`;
+// 	}
+// 	return items;
+// }
+
+// document.querySelector('main').innerHTML = `Congrats! You got <strong>${correctAnswers}</strong> of the answers correct!
+// <h3>You got these ones right</h3>
+// 	<ol>${results(rightOnes)}</ol>
+	
+// 	<h3>You got these ones wrong</h3>
+// 	<ol>${results(wrongOnes)}</ol>`;
+
+//---------------------------------------------------
+
 const quiz = [
-	['What is Clouds favorite sword?','Buster'],
-	['What are Kratos Blades called?','Blades of Chaos'],
-	['What is Kratos Axe called?','Leviathan Axe'],
-	['What is Sindri and Broks last name?','Huldra']
+	['Whats Samuses hair color?','Blonde'],
+	['What color does red and blue make?','Purple'],
+	['Dads favorite smokes','Kools']
 ]
 
-let correctAnswers = '';
-let rightOnes = [];
-let wrongOnes = [];
+let correctAnswers = 0;
+let rightAnswers = [];
+let wrongAnswers = [];
 
 for ( let x = 0; x < quiz.length; x++) {
 	let ask = prompt(quiz[x][0]);
-	if ( ask === quiz[x][1].toLowerCase()) {
+	if ( ask === quiz[x][1]) {
 		correctAnswers++;
-		`<li>${rightOnes.push(quiz[x][0])}</li>`;
+		rightAnswers.push(quiz[x][0])
 	} else {
-		`<li>${wrongOnes.push(quiz[x][0])}`;
+		wrongAnswers.push(quiz[x][0])
+	}
+} 
+
+function myFreshFunc(arr) {
+	let items = '';
+	for (let x = 0; x < arr.length; x++) {
+		items += `<li>${arr[x]}</li>`;
+	}
+	return items;
+}
+
+document.querySelector('main').innerHTML = `
+<h2>Congrats! You got ${correctAnswers} answer(s) correct!</h2>
+<h3> These were the questions you got right!</h3>
+<ol>${myFreshFunc(rightAnswers)}</ol>
+<h3> These were the questions you got <strong>wrong</strong></h3>
+<ol>${myFreshFunc(wrongAnswers)}</ol>
+`
+
+function startFun(arr, fn) {
+	for ( let x = 0; x < arr.length; x++){
+		fn(arr[x]);
 	}
 }
 
-document.querySelector('main').innerHTML = `Congrats! You got <strong>${correctAnswers}</strong> of the answers correct!
-<h3>You got these ones right</h3>
-	<ol>${rightOnes}</ol>
-	
-	<h3>You got these ones wrong</h3>
-	<ol>${wrongOnes}</ol>`;
+function endFunc(name) {
+	console.log(`${name} is one of the best colors`);
+}
 
+startFun(colors, endFunc);
