@@ -273,6 +273,8 @@ let wrongAnswers = [];
 // <ol>${myFreshFunc(wrongAnswers)}</ol>
 // `
 
+//----------- .map() method practice --------------------
+
 const weapons = ['blades','axe','spear']
 
 const bigWeapons = weapons.map(x => x.toUpperCase())
@@ -281,5 +283,12 @@ console.log(bigWeapons)
 
 const finalFantasy = ['Cloud', 'Zidane', 'Cecil']
 
-const smallFF = finalFantasy.map(x => x.toLowerCase())
-console.log(smallFF)
+const smallFF = finalFantasy.map(x => `${x} is my favorite protagonist! `)
+
+function loopFF(arr) {
+	for(let x = 0; x < arr.length; x++) {
+		console.log(`${arr[x]} LOVE this FF!`)
+	}
+}
+
+loopFF(smallFF)
