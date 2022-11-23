@@ -55,34 +55,6 @@ const quiz = [
 	{ question:'Dads favorite smokes', answer:'Kools'}
 ]
 
-let ask = ''
-let answersRight = 0
-let correctAnswers = []
-let wrongAnswers = []
+const quizKeys = Object.keys(quiz)
 
-for ( let x = 0; x < quiz.length; x++) {
-	ask = prompt(quiz[x].question)
-	if (ask === quiz[x].answer) {
-		answersRight++
-		correctAnswers.push(quiz[x].question)
-	} else {
-		wrongAnswers.push(quiz[x].question)
-	}
-}
-
-function results (arr) {
-	let items = ``
-	for (let x = 0; x < arr.length; x++) {
-		items += `<li>${arr[x]}</li>`
-	}
-	return items
-}
-
-document.querySelector('main').innerHTML = `
-Congrats! You got ${answersRight} right!
-<h3>You got theses questions right!</h3>
-<ol>${results(correctAnswers)}</ol>
-<h3>You got theses questions wrong!</h3>
-<ol>${results(wrongAnswers)}</ol>
-
-`
+console.log(quizKeys)
