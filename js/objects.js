@@ -25,10 +25,10 @@ function vampireHunter(ob) {
 //---------------------------------
 
 const godOfWar = {
-	name: "kratos",
-	weapon: "Blades of Chaos",
-	age: 47,
-	kin: "Atreus"
+	Name: "Kratos",
+	Weapon: "Blades of Chaos",
+	Age: 47,
+	Kin: "Atreus"
 }
 
 function loopGod(arr) {
@@ -39,4 +39,5 @@ function loopGod(arr) {
 	return items
 }
 
-// document.querySelector('main').innerHTML = `<ol>${loopGod(godOfWar)}</ol>`
+document.querySelector('main').innerHTML = `<ol>${loopGod(godOfWar)}</ol>
+<p>Everything we know about ${godOfWar.Name} is that he leaves a bloody wake with the use of his ${godOfWar.Weapon}. At the ripe age of ${godOfWar.Age}, he passes on his lineage by his son, ${godOfWar.Kin}. Long live the God of War!</p>`
