@@ -1,6 +1,6 @@
 const belmont = {
 	FirstName: "Trevor",
-	Weapon: "whip",
+	Weapon: "Whip",
 	Secondary: ["Cross Boomerang", "Holy Water", "Dagger"],
 	Age: 24,
 }
@@ -17,7 +17,26 @@ function vampireHunter(ob) {
 	return items
 }
 
-document.querySelector('main').innerHTML = `
-<ol>${vampireHunter(belmont)}</ol>`
+// document.querySelector('main').innerHTML = `
+// <ol>${vampireHunter(belmont)}</ol>`
 
 // vampireHunter(belmont)
+
+//---------------------------------
+
+const godOfWar = {
+	name: "kratos",
+	weapon: "Blades of Chaos",
+	age: 47,
+	kin: "Atreus"
+}
+
+function loopGod(arr) {
+	let items = ""
+	for ( let val in arr) {
+		items += `<li>${val}: ${arr[val]}</li>`
+	}
+	return items
+}
+
+// document.querySelector('main').innerHTML = `<ol>${loopGod(godOfWar)}</ol>`
