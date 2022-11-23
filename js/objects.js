@@ -1,18 +1,18 @@
 const belmont = {
-	firstName: "Trevor",
-	weapon: "whip",
-	secondaryW: ["Cross Boomerang", "Holy Water", "Dagger"],
-	age: "unknown",
+	FirstName: "Trevor",
+	Weapon: "whip",
+	Secondary: ["Cross Boomerang", "Holy Water", "Dagger"],
+	Age: 24,
 }
-belmont.clan = "Brotherhood of Light"
+belmont.Clan = "Brotherhood of Light"
 
-// console.log(belmont)
+console.log(belmont)
 
 //========== Looping through an Object (for in)=======================
 function vampireHunter(ob) {
 	let items = ''
-	for ( let traits in ob) {
-		items += `<li>Here are all the values: ${ob[traits]}</li> `
+	for ( let val in ob) {
+		items += `<li>${val}: ${ob[val]}</li> `
 	}
 	return items
 }
