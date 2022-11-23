@@ -6,4 +6,18 @@ const belmont = {
 }
 belmont.clan = "Brotherhood of Light"
 
-console.log(belmont)
+// console.log(belmont)
+
+//========== Looping through an Object (for in)=======================
+function vampireHunter(ob) {
+	let items = ''
+	for ( let traits in ob) {
+		items += `<li>Here are all the values: ${ob[traits]}</li> `
+	}
+	return items
+}
+
+document.querySelector('main').innerHTML = `
+<ol>${vampireHunter(belmont)}</ol>`
+
+// vampireHunter(belmont)
