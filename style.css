@@ -45,3 +45,6 @@ div {
 	text-align: center;
 	line-height: 50px;;
 }
+p {
+	width: 80vw;
+}
