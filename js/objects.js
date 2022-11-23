@@ -73,3 +73,13 @@ const ffLegends = [
 	{name: "Balthier", game: "FF12", age: 32, photo: '/img/balthier.jpg'},
 	{name: "Kain", game: "FF4", age: 26, photo: '/img/kain.jpg'}
 ]
+
+function loopLegends(arr) {
+	let items = ''
+	for(let x = 0; x < arr.length; x++) {
+		items += `<h2>${ffLegends[x].name}</h2>`
+	}
+	return items
+}
+
+document.querySelector('main').innerHTML = `${loopLegends(ffLegends)}`
