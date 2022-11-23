@@ -292,3 +292,5 @@ function loopFF(arr) {
 }
 
 loopFF(smallFF)
+
+console.log(turtles.concat(planets))
