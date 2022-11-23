@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  background: #9d9dc8;
+  background: #1f1f39;
   max-width: 800px;
   margin: 0 auto;
   padding: 0 2em 3em;
@@ -12,7 +12,7 @@ body {
 
 h1, h2, h3 {
   font-weight: 500;
-  color: #384047;
+  color: #b1b7bd;
 }
 
 h1 {

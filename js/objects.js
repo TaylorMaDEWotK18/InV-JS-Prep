@@ -67,17 +67,17 @@ console.log(quizKeys)
 */
 
 const ffLegends = [
-	{name: "Cloud", game: "FF7", age: 27, photo: '/img/cloud.jpg'},
-	{name: "Cecil", game: "FF4", age: 25, photo: '/img/cecil.jpg'},
-	{name: "Zidane", game: "FF9", age: 21, photo: '/img/zidane.jpg'},
-	{name: "Balthier", game: "FF12", age: 32, photo: '/img/balthier.jpg'},
-	{name: "Kain", game: "FF4", age: 26, photo: '/img/kain.jpg'}
+	{name: "Cloud", game: "FF7", age: 27, photo: 'img/cloud.jpg'},
+	{name: "Cecil", game: "FF4", age: 25, photo: 'img/cecil.jpg'},
+	{name: "Zidane", game: "FF9", age: 21, photo: 'img/zidane.jpg'},
+	{name: "Balthier", game: "FF12", age: 32, photo: 'img/balthier.jpg'},
+	{name: "Kain", game: "FF4", age: 26, photo: 'img/kain.jpg'}
 ]
 
 function loopLegends(arr) {
 	let items = ''
 	for(let x = 0; x < arr.length; x++) {
-		items += `<h2>${ffLegends[x].name}</h2>`
+		items += `<h2>${ffLegends[x].name} | ${ffLegends[x].game}</h2><strong> <h2> Age: ${ffLegends[x].age}</h2></strong><img src = ${ffLegends[x].photo}>`
 	}
 	return items
 }
