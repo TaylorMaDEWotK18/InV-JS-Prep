@@ -82,4 +82,14 @@ function loopLegends(arr) {
 	return items
 }
 
-document.querySelector('main').innerHTML = `${loopLegends(ffLegends)}`
+// document.querySelector('main').innerHTML = `${loopLegends(ffLegends)}`
+
+const bloodyBelmont = {
+	name: "Simon",
+	occupation: "Vampire Slayer",
+	warCry: function() {
+		console.log("Get ready fang fks!")
+	}
+}
+
+bloodyBelmont.warCry();
