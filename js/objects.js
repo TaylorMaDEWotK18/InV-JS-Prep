@@ -88,8 +88,37 @@ const bloodyBelmont = {
 	name: "Simon",
 	occupation: "Vampire Slayer",
 	warCry: function() {
-		console.log("Get ready fang fks!")
+		console.log(`Get ready fang fks! The ${this.occupation} is here!!`)
 	}
 }
 
 bloodyBelmont.warCry();
+
+//========= Writing my first class ===========
+
+const champ = {
+	type: "dog",
+	color: "gold",
+	speak: "bark",
+	speakHow: function() {
+		console.log(this.speak)
+	}
+}
+
+const louie = {
+	type: "dog",
+	color: "white",
+	speak: "bark",
+	peakHow: function() {
+		console.log(this.speak)
+	}
+}
+
+const penny = {
+	type: "cat",
+	color: "black and white",
+	speak: "meow",
+	peakHow: function() {
+		console.log(this.speak)
+	}
+}
