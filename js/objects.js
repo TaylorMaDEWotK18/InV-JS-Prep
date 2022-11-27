@@ -96,29 +96,36 @@ bloodyBelmont.warCry();
 
 //========= Writing my first class ===========
 
-const champ = {
-	type: "dog",
-	color: "gold",
-	speak: "bark",
-	speakHow: function() {
-		console.log(this.speak)
+class Pet {
+	constructor(type, color, speak){
+		this.type = type;
+		this.color = color;
+		this.speak = speak;
+	}
+	speakHow() {
+		console.log(`${this.speak} is how I talk`)
+	}
+}
+// now I can create any pet object I want with these class properties, with the fancy shmancy 'new' keyword
+const champ = new Pet('dog', 'gold', 'bark')
+const louie = new Pet('dog', 'white', 'bark')
+const penny = new Pet('cat', 'black and white', 'meow')
+console.log(champ.speakHow(), louie, penny)
+
+class Belmont {
+	constructor(weapon, secondary, companion) {
+		this.weapon = weapon;
+		this.secondary = secondary;
+		this.companion = companion;
+	}
+	call() {
+		alert('I hail for the clan of Belmont!')
 	}
 }
 
-const louie = {
-	type: "dog",
-	color: "white",
-	speak: "bark",
-	peakHow: function() {
-		console.log(this.speak)
-	}
-}
+const trevor = new Belmont('spike whip', 'dagger', 'wolf')
+const simon = new Belmont('standard whip','holy water','lion')
+const richter = new Belmont('sharp whip', 'cross', 'falcon')
+console.log(trevor, simon)
 
-const penny = {
-	type: "cat",
-	color: "black and white",
-	speak: "meow",
-	peakHow: function() {
-		console.log(this.speak)
-	}
-}
+simon.call()
